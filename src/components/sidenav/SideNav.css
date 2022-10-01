@@ -1,0 +1,39 @@
+/* .sidenav {
+  width: 210px;
+  background-color: #34495e;
+  background-color: #011627;
+  position: absolute;
+  height: 95vh;
+  margin-top: 80px;
+  padding: 0 30px;
+  left: -100%;
+  transition: all 1s;
+  z-index: 1;
+}
+
+.sidenav.active {
+  left: 0;
+}
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a {
+  font-family: 'Poppins';
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 6px;
+}
+
+ul li a:hover,
+ul li a:active {
+  background-color: rgb(241, 94, 255);
+} */

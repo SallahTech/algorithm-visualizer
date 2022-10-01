@@ -1,0 +1,10 @@
+.Bar {
+  margin: 2px;
+  width: 2px;
+  margin-bottom: 0;
+  background-color: #9e9a9a;
+  /* background-color: orangered; */
+  /* align-self: baseline; */
+  height: 150px;
+  backface-visibility: hidden;
+}
