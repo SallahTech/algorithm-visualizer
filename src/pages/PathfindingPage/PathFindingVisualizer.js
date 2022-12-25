@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import astarAlgorithm from "../../PathFindingAlgorithms/astarAlgorithm";
 import Node from "../../components/node/Node";
-import { animateAlgorithms, visualizeAstar } from "./animateAstar";
+import { animateAlgorithms } from "./animateAstar";
 import dijkstraAlgorithm from "../../PathFindingAlgorithms/dijkstraAlgorithm";
 import breadFirstSearchAlgorithm from "../../PathFindingAlgorithms/breadFirstSearchAlgorithm";
 import depthFirstSearchAlgorithm from "../../PathFindingAlgorithms/depthFirstSearchAlgorithm";
 import generateRandomWalls from "../../mazeGenerator/generateMaze";
-import { animateDijkstra } from "./animateDijkstra";
 import Header from "../../components/header/Header";
 import "./PathFindingVisualizer.css";
 
@@ -20,7 +19,7 @@ const DESTINATION_ROW = Math.floor(Math.random() * (rows - 1));
 const PathFindingVisualizer = () => {
   const [Grid, setGrid] = useState([]);
   const [mousePressed, setMousePressed] = useState(false);
-  const [clearVisitedNodes, setClearVisitedNodes] = useState(false);
+  // const [clearVisitedNodes, setClearVisitedNodes] = useState(false);
   const [currentAlgorithm, setCurrentAlgorithm] = useState("Dijkstra");
   const [isVisualizing, setIsVisualizing] = useState(false);
   const [title, setTitle] = useState("PathFinding Visualizer");
@@ -29,11 +28,11 @@ const PathFindingVisualizer = () => {
 
   useEffect(() => {
     initializeGrid();
-    if (clearVisitedNodes) {
-      initializeGrid();
-    }
+    // if (clearVisitedNodes) {
+    //   initializeGrid();
+    // }
     console.log("re-rendering");
-  }, [clearVisitedNodes]);
+  }, []);
 
   const initializeGrid = () => {
     const grid = new Array(rows);
@@ -103,20 +102,20 @@ const PathFindingVisualizer = () => {
     return newGrid;
   };
 
-  const clearWalls = (grid = Grid) => {
-    let newGrid = [...grid];
-    for (let row of newGrid) {
-      for (let node of row) {
-        const { x, y } = node;
-        node.isWall = false;
-        let newNode = {
-          ...node,
-        };
-        newGrid[x][y] = newNode;
-      }
-    }
-    setGrid(newGrid);
-  };
+  // const clearWalls = (grid = Grid) => {
+  //   let newGrid = [...grid];
+  //   for (let row of newGrid) {
+  //     for (let node of row) {
+  //       const { x, y } = node;
+  //       node.isWall = false;
+  //       let newNode = {
+  //         ...node,
+  //       };
+  //       newGrid[x][y] = newNode;
+  //     }
+  //   }
+  //   setGrid(newGrid);
+  // };
 
   const clearGrid = () => {
     if (isVisualizing) {

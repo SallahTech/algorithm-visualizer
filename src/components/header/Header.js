@@ -4,8 +4,7 @@ import SideNav from "../sidenav/SideNav";
 import "./Header.css";
 
 const Header = (props) => {
-  const { onChange, value, min, max, step, onClick, selected, children } =
-    props;
+  const { onChange, value, min, max, step, onClick, children } = props;
   const [rangeValue, setRangeValue] = useState(10);
   const [algorithm, setAlgorithm] = useState("bubble sort");
   const [mouseState, setMouseState] = useState(null);
@@ -31,10 +30,10 @@ const Header = (props) => {
     setAlgorithm(e.target.attributes.algorithm.value);
   };
 
-  const dropdownChangeHandler = (e) => {
-    console.log(e.target.value);
-    onChange(e.target.value);
-  };
+  // const dropdownChangeHandler = (e) => {
+  //   console.log(e.target.value);
+  //   onChange(e.target.value);
+  // };
 
   const navigation =
     window.location.pathname === "/" ? (
