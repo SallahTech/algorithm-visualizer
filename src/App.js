@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import SortingVisualizer from "./pages/SortingPage/SortingVisualizer";
 import PathFindingVisualizer from "./pages/PathfindingPage/PathFindingVisualizer";
 import SideNav from "./components/sidenav/SideNav";
