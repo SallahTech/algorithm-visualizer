@@ -2,17 +2,15 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin: 70px;
-  padding-top: 25px;
-  padding-bottom: 1px;
   min-width: 10rem;
   max-width: 95%;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.45);
   backface-visibility: hidden;
   overflow: hidden;
-  margin: 0 auto;
-  min-height: 45vh;
+  margin:  auto;
+  height: calc(100vh - 300px);
+
 }
 
 .container {
@@ -26,6 +24,7 @@
   margin: 5px;
   padding: 15px;
 }
+
 .array-container {
   align-items: flex-end;
   display: flex;
@@ -44,8 +43,7 @@
 .Bar {
   margin: 1px;
   width: 4px;
-  margin-bottom: 0;
-  background-color: #6299f1;
+  margin-bottom: 0; background-color: #6299f1;
   height: 300px;
   backface-visibility: hidden;
 }

@@ -3,6 +3,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .wrapper {
   max-width: 80%;
   margin: auto;
@@ -11,10 +12,9 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px !important;
-  /* padding: 20px 0; */
-  /* overflow-y: hidden; */
-  height: auto;
+  height: calc(100vh - 80px);
 }
+
 .row-wrapper {
   display: flex;
 }

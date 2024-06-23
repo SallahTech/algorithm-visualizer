@@ -3,8 +3,6 @@ header {
   flex: 1;
   width: 100%;
   height: 80px;
-  margin-bottom: 1rem;
-  /* background: #34495e; */
   background-color: #011627;
   color: white;
   position: relative;
@@ -71,10 +69,12 @@ header svg {
   cursor: grab;
   /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
 .sliderValue {
   position: relative;
   width: 100%;
 }
+
 .sliderValue span {
   position: absolute;
   height: 45px;
@@ -88,9 +88,11 @@ header svg {
   transform-origin: bottom;
   transition: transform 0.3s ease-in-out;
 }
+
 .sliderValue span.show {
   transform: translateX(-70%) scale(1);
 }
+
 .sliderValue span:after {
   position: absolute;
   content: "";
@@ -106,6 +108,7 @@ header svg {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
+
 .field {
   display: flex;
   align-items: center;
@@ -114,18 +117,22 @@ header svg {
   position: relative;
   width: 4rem;
 }
+
 .field .value {
   position: absolute;
   font-size: 18px;
   color: rgb(241, 94, 255);
   font-weight: 600;
 }
+
 .field .value.left {
   left: -22px;
 }
+
 .field .value.right {
   right: -43px;
 }
+
 .range input {
   --webkit-appearance: none;
   width: 100%;
@@ -137,6 +144,7 @@ header svg {
   border: none;
   z-index: 2222;
 }
+
 .range input::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -147,6 +155,7 @@ header svg {
   border: 1px solid rgb(241, 94, 255);
   cursor: pointer;
 }
+
 .range input::-moz-range-thumb {
   --webkit-appearance: none;
   width: 20px;
@@ -157,6 +166,7 @@ header svg {
   border: 1px solid rgb(241, 94, 255);
   cursor: pointer;
 }
+
 .range input::-moz-range-progress {
   background: rgb(
     241,
@@ -164,13 +174,14 @@ header svg {
     255
   ); /*this progress background is only shown on Firefox*/
 }
+
 .sidenav {
   width: 240px;
   background-color: #34495e;
   background-color: #011627;
   position: absolute;
-  height: 90vh;
-  margin-top: -0.98rem;
+  height: calc(100vh - 80px);
+  /* margin-top: -0.98rem; */
   padding: 0 20px;
   left: -90%;
   transition: all 1s;
@@ -180,6 +191,7 @@ header svg {
 .sidenav.active {
   left: 0;
 }
+
 ul {
   padding: 0;
 }
@@ -208,9 +220,11 @@ ul li a:focus {
   color: rgb(241, 94, 255);
   border-bottom: 2px solid rgb(241, 94, 255);
 }
+
 ul li a:hover .searching-icon {
   fill: #fff;
 }
+
 .searching-icon {
   margin-right: 10px;
   margin-left: 0;
@@ -222,6 +236,7 @@ ul li a:hover .searching-icon {
 .pathfinding-nav .logo {
   margin-left: -5rem;
 }
+
 .select-algorithm__control {
   display: flex;
   /* width: 100%; */
@@ -254,6 +269,7 @@ ul li a:hover .searching-icon {
   color: #d6d2d2;
   border: none;
 }
+
 .select-algorithm__control select.select:hover {
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
@@ -261,6 +277,7 @@ ul li a:hover .searching-icon {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+
 .select-algorithm__control select.select:focus {
   outline: none;
 }
